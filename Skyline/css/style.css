@@ -1,0 +1,261 @@
+body {
+  overflow: hidden;  
+  background: #ffcce6;
+  background: -webkit-linear-gradient(#b3e0ff, #ffcce6 65%);
+  background:    -moz-linear-gradient(#b3e0ff, #ffcce6 65%);
+  background: linear-gradient(#b3e0ff, #ffcce6 65%);
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#ocean {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #4d94ff;
+  background: -webkit-linear-gradient(#ffe6e6, #4d94ff 25%);
+  background:    -moz-linear-gradient(#ffe6e6, #4d94ff 25%);
+  background: linear-gradient(#ffe6e6, #4d94ff 25%);
+  width: 100%;
+  height: 25%;
+  animation: oceanFlow 6s ease-in infinite;
+  z-index: 100;
+}
+
+.sun {
+  position: absolute;
+  left: 50%;
+  bottom: 60%;
+  transform: translate(-50%, 0%);
+  border-radius: 50%;
+  height: 25%;
+  width: 15%;
+  background-color: #ff751a;
+  background: #ff751a;
+  background: -webkit-linear-gradient(#ff751a, #ffff66 125%);
+  background:    -moz-linear-gradient(#ff751a, #ffff66 125%);
+  background: linear-gradient(#ff751a, #ffff66 125%);
+  box-shadow: 0px 0px 25px #ffff66;
+  z-index: 70;
+}
+
+.island {
+  width: 25%;
+  height: 10%;
+  background: #ffdab3;
+  background: -webkit-linear-gradient(#ffdab3 30%, #b35c00);
+  background:    -moz-linear-gradient(#ffdab3 30%, #b35c00);
+  background: linear-gradient(#ffdab3 30%, #b35c00);
+  border-radius: 60% 60% 0px 0px;
+  position: absolute;
+  left: 68%;
+  bottom: 21%;
+  z-index: 90;
+}
+
+.tree {
+  position: absolute;
+  left: 77%;
+  bottom: 29%; 
+  width: 11%;
+  z-index: 89;
+}
+
+.plane {
+  top: 20%;
+  left: 100%;
+  width: 13%;
+  position: absolute;
+  animation: planeFlow 20s linear infinite;
+  -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+  animation-delay: 1s;
+  z-index: 85;
+}
+
+.all_clouds .cloud1 {
+  position: absolute;
+  width: 18%;
+  top: 10%;
+  animation: cloudFlow1 150s linear infinite;
+  z-index: 75;
+}
+
+.all_clouds .cloud2 {
+  position: absolute;
+  width: 18%;
+  top: -5%;
+  animation: cloudFlow2 150s linear infinite;
+  z-index: 65;
+}
+
+.all_clouds .cloud3 {
+  position: absolute;
+  width: 18%;
+  animation: cloudFlow3 150s linear infinite;
+  z-index: 75;
+}
+
+.all_clouds .cloud4 {
+  position: absolute;
+  width: 18%;
+  top: 15%;
+  animation: cloudFlow4 150s linear infinite;
+  z-index: 65;
+}
+
+.all_clouds .cloud5 {
+  position: absolute;
+  width: 18%;
+  top: -2%;
+  animation: cloudFlow5 150s linear infinite;
+  z-index: 75;
+}
+
+@keyframes cloudFlow1 {
+  0% {
+   left: 75%;
+  }
+  24% {
+    left: 100%;
+    visibility: hidden;
+  }
+  25% {
+    left: -14%;
+    visibility: hidden;
+  }
+  26% {
+    visibility: visible;
+  }
+  100% {
+    left: 75%;
+  }
+}
+
+@keyframes cloudFlow2 {
+  0% {
+  left: 60%;
+  }
+  40% {
+    left: 100%;
+    visibility: hidden;
+  }
+  41% {
+    left: -15%;
+    visibility: hidden;
+  }
+  42% {
+    visibility: visible;
+  }
+  100% {
+    left: 60%;
+  }
+}
+
+@keyframes cloudFlow3 {
+  0% {
+    left: 34%;
+  }
+  62% {
+    left: 100%;
+    visibility: hidden;
+  }
+  63% {
+    left: -15%;
+    visibility: hidden;
+  }
+  64% {
+    visibility: visible;
+  }
+  100% {
+    left: 34%;
+  }
+}
+
+@keyframes cloudFlow4 {
+  0% {
+   left: 17%; 
+  }
+  77% {
+    left: 100%;
+    visibility: hidden;
+  }
+  78% {
+    left: -12%;
+    visibility: hidden;
+  }
+  79% {
+    visibility: visible;
+  }
+  100% {
+    left: 17%;
+  }
+}
+
+@keyframes cloudFlow5 {
+  0% {
+    left: 5%;
+  }
+  87% {
+    left: 100%;
+    visibility: hidden;
+  }
+  88% {
+    left: -13%;
+    visibility: hidden;
+  }
+  89% {
+    visibility: visible;
+  }
+  100% {
+    left: 5%;
+  }
+}
+
+@keyframes oceanFlow {
+  0% {
+    height: 25%;
+  }
+  75% {
+    height: 26%;
+  }
+  100% {
+    height: 25%;
+  }
+}
+
+@keyframes boatFlow {
+  0% {
+    bottom: 10%;
+  }
+  75% {
+    bottom: 11%;
+  }
+  100% {
+    bottom: 10;
+  }  
+}
+
+@keyframes planeFlow {
+  0% {
+    left: 100%;
+  }  
+  18.75% {
+    top: 23%;
+  }
+  37.5% {
+    top: 20%;
+  }
+  56.25% {
+    top: 23%;
+  }
+  75% {
+   top: 20%;
+   left: -32%;
+  }
+  100% {
+    top: 23%;
+    left: -32%;
+  }
+}
